@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+<div style="font-size: large; font-family: sans-serif">
+  <p style="color: #000011; background-color: powderblue">{{ status }}</p>
+</div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="4"></td>
+                <td>$10,000.00</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            {% for stockname, price, quantity, total in transitions %}
+                <tr>
+                    <td> {{ stockname }} </td>
+                    <td> {{ stockname }} </td>
+                    <td> {{ quantity }} </td>
+                    <td> {{ price }} </td>
+                    <td> {{ total }} </td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td>CASH</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{ cash }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
