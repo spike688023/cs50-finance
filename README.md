@@ -16,3 +16,6 @@
   * [Alphabetical index of directives](http://nginx.org/en/docs/dirindex.html)
 * Passenger
   * [Configuration reference](https://www.phusionpassenger.com/library/config/standalone/reference/)
+
+
+auto build test
